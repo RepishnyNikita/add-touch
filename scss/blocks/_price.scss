@@ -1,0 +1,75 @@
+.price {
+    padding: 65px 0;
+}
+
+.price__container{
+    max-width: 1530px;
+    padding: 0 50px;
+    position: relative;
+
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        height: 700px;
+        width: 700px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    &::before{
+        bottom: 14%;
+        right: -21%;
+    }
+
+    &::after{
+        bottom: 20%;
+        right: -38%;
+    }
+
+}
+
+.price__title {
+    text-align: center;
+    margin-bottom: 85px;
+    position: relative;
+
+    &::after{
+        content: url(./../img/price/arrow-1.svg);
+        position: absolute;
+        top: 20px;
+        left: 22%;
+    }
+}
+
+
+.price__card {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    column-gap: 35px;
+    row-gap: 83px;
+    position: relative;
+
+    &::after{
+        content: url(./../img/price/arrow-2.svg);
+        position: absolute;
+        top: 43%;
+        left: -14%;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        border-radius: 500px;
+        background-color: rgba(255, 255, 255, 0.10);
+        filter: blur(250px);
+        transform: translate(44%, -50%);
+    }
+}
+
+
+

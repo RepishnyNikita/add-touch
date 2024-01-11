@@ -1,0 +1,33 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 34px 40px;
+    border-radius: 50px;
+    background-color: #2D2C30;
+    cursor: default;
+}
+
+.accordion__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion__header-toggle{
+    cursor: pointer;
+    
+}
+
+.accordion__desc {
+    font-weight: 500;
+    line-height: 1.7;
+    position: relative;
+   
+    
+
+    &--hidden{
+        display: none;
+        transition: 1s ease-in;
+    }
+}
+

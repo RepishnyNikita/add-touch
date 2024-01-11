@@ -1,0 +1,128 @@
+.header {
+    padding: 22px 0 222px;
+}
+
+.header__nav {
+    align-items: center;
+    margin-bottom: 142px;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+    cursor:default;
+    position: relative;
+
+    & p{
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.80);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.94; 
+    }
+    
+    &::before{
+        content:'';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1200px;
+        height: 1200px;
+        z-index: -1;
+        background-image: url(./../img/header/card-x2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        transform: translate(107%, -12%);
+    }
+
+    &::after{
+        content: url(./../img/header/wave.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(62%, 44%);
+        z-index: -2;
+    }
+
+}
+
+.header__content-title {
+    margin-bottom: 20px;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        border-radius: 500px;
+        background-color: rgba(255, 255, 255, 0.10);
+        filter: blur(250px);
+        transform: translate(91%, 10%);
+    }
+}
+
+.header__content-btn {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 45px;
+
+    position: relative;
+
+    &::before{
+        content: url(./../../img/header/arrow.svg);
+        position: absolute;
+        top: -25px;
+        right: -50px;
+    }
+}
+
+.header__content-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #FFF;
+    font-weight: 700;
+}
+
+.header__content-wrapper {
+    display: flex;
+    gap: 55px;
+}
+
+.header__content-wrapper__col {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.80);
+    font-weight: 500;
+
+    & span{
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    &--blue {
+        & span{
+            color: #0E8BFF;   
+    }
+    }
+
+    &--green{
+        & span{
+            color: #4DFF20;
+        }
+    }
+
+    &--orandg{
+        & span{
+            color: #FF7422;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,39 @@
+.footer {
+    padding:45px 0;
+}
+
+.footer__nav {
+    margin-bottom: 30px;
+}
+
+
+.footer-content {
+    padding: 16px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.10);
+
+    a{
+        color: #FFF;
+        font-weight: 500;
+    }
+}
+
+.footer-content__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a{
+        transition: 0.2s ease-in;
+
+        &:hover{
+        position: relative;
+            top: 3px; 
+        }
+}
+
+}
+
