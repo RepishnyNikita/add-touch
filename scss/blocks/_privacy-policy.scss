@@ -3,6 +3,7 @@
     align-items: center;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.10);
+    font-size: clamp(12px, 0.606rem + 0.64vw, 18px);
 
     &--mobile{
         cursor: pointer;

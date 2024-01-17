@@ -1,7 +1,7 @@
 .social {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: clamp(8px, 0.332rem + 0.74vw, 15px);
 
     &--mobile{
         gap: 8px;
@@ -19,5 +19,9 @@
         position: relative;
             top: 3px; 
         }
+    }
+
+    img{
+        width: clamp(30px, 1.172rem + 3.13vw, 50px);
     }
 }

@@ -1,7 +1,9 @@
 .button{
     padding: 0 55px;
-    line-height: 66px;
+    line-height: clamp(39px, 1.791rem + 2.87vw, 66px);
     font-weight: 700;
+
+    font-size: clamp(12px, 0.606rem + 0.64vw, 18px);
 
     justify-self: flex-end;
     align-self: flex-start;
@@ -42,7 +44,7 @@
 
     &--faq{
         background: transparent;
-        border-radius: 20px;
+        border-radius: clamp(15px, 0.818rem + 0.53vw, 20px);
         border: 2px solid #FFF;
         color: #FFF;
     }

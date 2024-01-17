@@ -3,13 +3,33 @@
 }
 
 .footer__nav {
-    margin-bottom: 30px;
+    margin-bottom: clamp(12px, 0.319rem + 1.91vw, 30px);
+
+    .social{
+        display: none;
+        @include mobile-x(){
+            display: block;
+            img{
+                max-width: 50px;
+            }
+        }
+    }
 }
+
+
 
 .footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile-x (){
+        justify-content: center;
+        & .social{
+            display: none;
+
+        }
+    }
 }
 
 
