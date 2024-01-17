@@ -1,14 +1,15 @@
 .title{
-    font-size: 45px;
+    font-size: clamp(26px, 1.17rem + 2.02vw, 45px);
     font-weight: 700;
     color: #fff;
+    
 
     &--h1{
-        font-size: 85px;
-        font-weight: 500;
+        font-size: clamp(40px, 1.423rem + 4.79vw, 85px);
     }
+
     &--h3{
-        font-size: 22px;
+        font-size: clamp(18px, 1.029rem + 0.43vw, 22px);
     }
 
     &--h4{

@@ -1,0 +1,23 @@
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &--mobile{
+        gap: 8px;
+
+        a{
+            width: 30px;
+        }
+    }
+
+    a{
+        transition: 0.2s ease-in;
+
+
+        &:hover{
+        position: relative;
+            top: 3px; 
+        }
+    }
+}

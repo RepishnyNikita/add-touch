@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <header class="header ">
+    <header class="header none">
         <div class="container">
 
             <nav class="header__nav nav">
@@ -27,113 +27,153 @@
                 </ul>
                 
                 <button class="button button--nav">Заказать</button> 
+
+                <div class="nav-toggle"> 
+
+                        <img class="nav-mobile__icon" src="./img/svg/nav.svg" alt="nav icon">
+                        
+                </div>
  
             </nav>
 
-            <div class="header__content">
+            <div class="header__wrapper">
+                
 
-                <div class="header__content-title">
-                    <h1 class="title title--h1">Сделай
-                        <img src="./img/header/rhombus.svg" alt="rhombus"> <!-- Вынести на абсолют-->
-                        <strong>свой бренд узнаваемым</strong>
-                    </h1>
-                </div>
+                <div class="header__content">
 
-                <p>Изготовление брендированных NFC карт с онлайн сервисом для создания и редактирования цифровых визиток для сотрудников компании.</p>
+                    <div class="header__content-circle circle"></div>
 
-                <div class="header__content-btn">
-                    <button class="button button--content">Заказать</button>
+                    
 
-                    <a class="header__content-link" href="#!">Подробнее
-                        <img src="./img/header/play.svg" alt="play">
-                    </a>
-                </div>
+                    <div class="header__content-title">
 
-                <div class="header__content-wrapper">
+                        <span>Сделай<img src="./img/header/rhombus.svg" alt=""></span>
+                        <h1 class="title title--h1">свой бренд узнаваемым</h1>
 
-                    <div class="header__content-wrapper__col header__content-wrapper__col--blue">
-                        <span>10+</span>
-                        <p>Материалов карт</p>
                     </div>
 
-                    <div class="header__content-wrapper__col header__content-wrapper__col--green">
-                        <span>100+</span>
-                        <p>Отзывов</p>
+                    <p>Изготовление брендированных NFC карт с онлайн сервисом для создания и редактирования цифровых визиток для сотрудников компании.</p>
+
+                    <div class="header__content-btn">
+
+                        <button class="button button--content">Заказать</button>
+
+                        <a class="header__content-link" href="#!">Подробнее
+                            <img src="./img/header/play.svg" alt="play">
+                        </a>
+
+                        <div class="header__content-btn__img">
+                            <img src="./img/header/arrow.svg" alt="">
+                        </div>
+
                     </div>
 
-                    <div class="header__content-wrapper__col header__content-wrapper__col--orandg">
-                        <span>∞+</span>
-                        <p>Вариации карт</p>
+                    <div class="header__content-wrapper">
+
+                        <div class="header__content-wrapper__col header__content-wrapper__col--blue">
+                            <span>10+</span>
+                            <p>Материалов карт</p>
+                        </div>
+
+                        <div class="header__content-wrapper__col header__content-wrapper__col--green">
+                            <span>100+</span>
+                            <p>Отзывов</p>
+                        </div>
+
+                        <div class="header__content-wrapper__col header__content-wrapper__col--orandg">
+                            <span>∞+</span>
+                            <p>Вариации карт</p>
+                        </div>
+
                     </div>
 
+                </div> 
+
+                <div class="header__img">
+                    <img class="header__img-bg" src="./img/header/card-x2.png" alt="">
                 </div>
 
             </div>
 
         </div>
+
+       
     </header>
 
-    <section class="benefist ">
+    <section class="benefist none">
         <div class="container">
 
             <div class="benefits__title">
                 <h2 class="title">Наши преимущества</h2>
             </div>
 
-            <div class="benefits__col">
+            <div class="benefits__wrapper">
 
-                <div class="benefist__wrapper">
+                <div class="benefits__circle circle"></div>
 
-                    <div class="benefist__wrapper-img">
-                        <img src="./img/svg/lightning.svg" alt="lightning">
-                    </div>
-
-                    <div class="benefist__wraper-text">
-                        <h3 class="title title--h3">Оперативность</h3>
-                        <p class="benefist__wraper-text__desc">С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации предложений.</p>
-                    </div>
-
+                <div class="benefits__img">
+                    <img class="img" src="./img/benefits/card-x2.png" alt="">
                 </div>
 
-                <div class="benefist__wrapper">
+                <div class="benefits__col">
 
-                    <div class="benefist__wrapper-img benefist__wrapper-img--reliability">
-                        <img src="./img/svg/shild.svg" alt="reliability">
+                    <div class="benefist__content">
+    
+                        <div class="benefist__content-img">
+                            <img src="./img/svg/lightning.svg" alt="lightning">
+                        </div>
+    
+                        <div class="benefist__content-text">
+                            <h3 class="title title--h3">Оперативность</h3>
+                            <p class="benefist__content-text__desc">С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации предложений.</p>
+                        </div>
+    
                     </div>
-
-                    <div class="benefist__wraper-text">
-                        <h3 class="title title--h3">Оперативность</h3>
-                        <p class="benefist__wraper-text__desc">С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации предложений.</p>
+    
+                    <div class="benefist__content">
+    
+                        <div class="benefist__content-img benefist__content-img--reliability">
+                            <img src="./img/svg/shild.svg" alt="reliability">
+                        </div>
+    
+                        <div class="benefist__content-text">
+                            <h3 class="title title--h3">Оперативность</h3>
+                            <p class="benefist__content-text__desc">С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации предложений.</p>
+                        </div>
+    
                     </div>
-
-                </div>
-
-                <div class="benefist__wrapper">
-
-                    <div class="benefist__wrapper-img benefist__wrapper-img--reviews">
-                        <img src="./img/svg/feedback.svg" alt="reviews">
+    
+                    <div class="benefist__content">
+    
+                        <div class="benefist__content-img benefist__content-img--reviews">
+                            <img src="./img/svg/feedback.svg" alt="reviews">
+                        </div>
+    
+                        <div class="benefist__content-text">
+                            <h3 class="title title--h3">Оперативность</h3>
+                            <p class="benefist__content-text__desc">С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации предложений.</p>
+                        </div>
+    
                     </div>
-
-                    <div class="benefist__wraper-text">
-                        <h3 class="title title--h3">Оперативность</h3>
-                        <p class="benefist__wraper-text__desc">С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации предложений.</p>
-                    </div>
-
-                </div>
+    
+                </div>   
 
             </div>
 
         </div>
     </section>
 
-    <section class="price ">
+    <section class="price">
         <div class="container price__container">
 
             <div class="price__title">
                 <h2 class="title title--h2">Наши цены</h2>
             </div>
 
+            <div class="price__circle circle"></div>
+
             <div class="price__card">
+
                     <!-- ============= 1 ============== -->
                     <div class="card">
 
@@ -145,7 +185,7 @@
                             <h3 class="title title--h3">Общая NFC - Карта </h3>
                             <p class="card__text-desc">Карта без нанесения фирменного стиля и контактной информации. С полным набором функций.</p>
                             <span>500₽</span>
-                            <span>Опт:250₽</span>
+                            <span>Опт: 250₽</span>
                         </div>
 
                         <div class="card__btn">
@@ -167,7 +207,7 @@
                             <h3 class="title title--h3">Персональная</h3>
                             <p class="card__text-desc">Фирменная карта с нанесением контактной информации и полным набором функций.</p>
                             <span>600₽</span>
-                            <span>Опт:450₽</span>
+                            <span>Опт: 450₽</span>
                         </div>
 
                         <div class="card__btn">
@@ -189,7 +229,7 @@
                             <h3 class="title title--h3">Индивидуальный дизайн</h3>
                             <p class="card__text-desc">Карта с нанесением собственного дизайна и с полным набором функций.</p>
                             <span>700₽</span>
-                            <span>Опт:1000₽</span>
+                            <span>Опт: 1000₽</span>
                         </div>
 
                         <div class="card__btn">
@@ -211,7 +251,7 @@
                             <h3 class="title title--h3">Общая NFC - Карта </h3>
                             <p class="card__text-desc">Карта без нанесения фирменного стиля и контактной информации. С полным набором функций.</p>
                             <span>500₽</span>
-                            <span>Опт:250₽</span>
+                            <span>Опт: 250₽</span>
                         </div>
 
                         <div class="card__btn">
@@ -233,7 +273,7 @@
                             <h3 class="title title--h3">Персональная</h3>
                             <p class="card__text-desc">Фирменная карта с нанесением контактной информации и полным набором функций.</p>
                             <span>600₽</span>
-                            <span>Опт:450₽</span>
+                            <span>Опт: 450₽</span>
                         </div>
 
                         <div class="card__btn">
@@ -255,7 +295,7 @@
                             <h3 class="title title--h3">Индивидуальный дизайн</h3>
                             <p class="card__text-desc">Карта с нанесением собственного дизайна и с полным набором функций.</p>
                             <span>700₽</span>
-                            <span>Опт:1000₽</span>
+                            <span>Опт: 1000₽</span>
                         </div>
 
                         <div class="card__btn">
@@ -266,8 +306,6 @@
                         <p>Гарантия на товар: 1 – год.</p>
                     
                     </div>
-
-
 
             </div>
 
@@ -336,7 +374,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer none">
         <div class="container">
 
             <nav class="footer__nav nav">
@@ -355,28 +393,66 @@
  
             </nav>
 
-            <div class="footer-content">
+            <div class="footer-content privacy-policy">
 
                 <a href="#!">Политика конфиденциальности</a>
 
-                <div class="footer-content__social">
+                <div class="social">
 
-                    <a href="#!">
-                        <img src="./img/social-icon/wapp.svg" alt="whatsapp">
-                    </a>
-                    
-                    <a href="#!">
-                        <img src="./img/social-icon/vk.svg" alt="vk">
-                    </a>
+                        <a href="#!">
+                            <img src="./img/social-icon/wapp.svg" alt="whatsapp">
+                        </a>
+                        
+                        <a href="#!">
+                            <img src="./img/social-icon/vk.svg" alt="vk">
+                        </a>
 
-                    <a href="#!">
-                        <img src="./img/social-icon/inst.svg" alt="inst">
-                    </a>
+                        <a href="#!">
+                            <img src="./img/social-icon/inst.svg" alt="instagram">
+                        </a>
 
                 </div>
+
             </div>
+
         </div>
     </footer>
+
+    <div class="nav-mobile">
+
+
+        <ul class="nav-mobile__list">
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link nav-mobile__list-link--active" href="#!">Главная</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Преимущества</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Наши цены</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">FAQ</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Контакты</a></li>
+        </ul>
+
+
+        <button class="button button--nav button--nav-mobile">Заказать</button> 
+
+        <div class="social social--mobile">
+
+            <a href="#!">
+                <img src="./img/social-icon/wapp.svg" alt="whatsapp">
+            </a>
+            
+            <a href="#!">
+                <img src="./img/social-icon/vk.svg" alt="vk">
+            </a>
+
+            <a href="#!">
+                <img src="./img/social-icon/inst.svg" alt="instagram">
+            </a>
+
+        </div>
+
+        <div class="privacy-policy privacy-policy--mobile">
+            <a href="#!">Политика конфиденциальности</a>
+        </div>
+
+    </div>
 
 </body>
 </html>

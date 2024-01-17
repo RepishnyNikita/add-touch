@@ -1,7 +1,12 @@
+
+// clamp(161px, 8.483rem + 7.02vw, 227px)
 .card {
-    // display: flex;
-    // flex-direction: column;
-    padding: 227px 30px 25px;
+    padding: 
+    0
+    clamp(25px, 0.755rem + 2.81vw, 57px)
+    clamp(20px, 1.13rem + 0.53vw, 25px)
+    clamp(15px, 0.559rem + 1.32vw, 30px);
+
     max-width:450px;
     width: 100%;
     position: relative;
@@ -9,49 +14,63 @@
     border-radius: 30px;
     background-color: #2D2C30;
 
+    font-size: clamp(12px, 0.606rem + 0.64vw, 18px); 
+
     & p {
         color: #fff;
         font-weight: 500;
         line-height: 1.6;
     }
+
+    @include mobile-x (){
+        &:nth-child(n + 4){
+            display: none;  //cкрытие карточек полсе 3-ей
+        }
+    }
 }
 
 .card__img {
-    position: absolute;
-    top: -40px;
-    left: -40px;
+    // position: absolute;
+    // top: -40px;
+    // left: -40px;
+    max-width: clamp(280px, 14.771rem + 12.13vw, 394px);
+    min-width: 280px;
+    transform: translate(-20%,-11%);
+
+    @include mobile (){
+        transform: translate(-1%,-11%);
+    }
 }
 
 .card__text {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 0.505rem + 0.53vw, 15px);
 
     & span{
-        font-size: 35px;
+        font-size: clamp(22px, 1.064rem + 1.38vw, 35px);
         color: #fff;
         font-weight: 700;
     }
 }
 
-// .card__text-title {
-
-// }
 
 .card__text-desc {
     font-weight: 500;
-    line-height: 1.6; 
+    line-height: 1.6;
+    min-height: clamp(66px, 3.69rem + 1.94vw, 90px);  //fix перескок текста
 }
 
 .card__btn {
     display: flex;
     gap: 35px;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 0.386rem + 1.06vw, 20px);
     align-items: center;
 
     & a{
         color: #fff;
         font-weight: 700;
+        font-size: inherit;
     }
 }

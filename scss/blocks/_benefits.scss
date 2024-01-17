@@ -1,68 +1,83 @@
 .benefist {
-    padding: 65px 0 228px;
+    padding: clamp(35px, 1.469rem + 3.19vw, 65px) 0 clamp(0px, -23.471rem + 67.06vw, 228px);
     background-color:rgba(255, 255, 255, 0.03);
 }
 
 .benefits__title {
     text-align: center;
-    margin-bottom: 108px;
+    margin-bottom: clamp(25px, -0.424rem + 8.83vw, 108px);
     position: relative;
+}
 
-    &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 500px;
-        height: 500px;
-        border-radius: 500px;
-        background-color: rgba(255, 255, 255, 0.10);
-        filter: blur(250px);
-        transform: translate(-80%, 58%);
+.benefits__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    gap: 25px;
+
+    @include tablet (){
+        flex-direction: column-reverse;
+    }
+
+
+}
+
+.benefits__circle{
+    top: 30%;
+    left: -18%;
+
+    @include mobile-x (){
+        top: -3%;
+        left: -30%;
     }
 }
 
-.benefits__col {
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-
-    &::before{
-        position: absolute;
-        content:'';
-        top: 0;
-        left: 0;
-        width: 905px;
-        height: 992px;
-        background-image: url(./../img/benefits/card-x2.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        transform: translate(-11%, -11%);
-        z-index: 1;
-    }
+.benefits__img {
+    max-width: 906px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-68%, -11%);
+    z-index: 1;
 
     &::after{
         content: url(./../img/header/wave.svg);
         position: absolute;
         bottom: 0;
         left: 0;
-        transform: translate(-68%, 50%);
+        transform: translate(-65%, -39%);
         z-index: -2;
+
+        @include tablet (){
+            display: none;
+        }
     }
 
+    @include tablet (){
+        position: unset;
+        transform: translate(0%, 5%);
+    }
 }
 
-.benefist__wrapper {
+.benefits__col {
     display: flex;
-    gap: 25px;
-    padding: 25px 30px;
+    gap: clamp(10px, 0.146rem + 2.13vw, 30px);
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.benefist__content {
+    display: flex;
+    gap: clamp(15px, 0.698rem + 1.06vw, 25px);
+    padding: clamp(15px, 0.698rem + 1.06vw, 25px) clamp(15px, 0.578rem + 1.6vw, 30px);
     max-width: 650px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.10);
 
     position: relative;
+
+
 
     &:first-child{
 
@@ -71,6 +86,17 @@
             content: url(./../img/benefits/arrow.svg);
             top: -32%;
             left: -26%;
+            z-index: 1;
+        }
+
+        @include tablet (){
+            &::before{
+                content: url(./../../img/benefits/arrow-mobile.svg );
+                right: 4px;
+                left: unset;
+                top: -6px;
+            }
+            
         }
     }
 
@@ -80,35 +106,60 @@
             content: url(./../img/benefits/arrow2.svg);
             bottom: -60%;
             right: -15%;
+
+            @include mobile-x (){
+                content: url(./../img/benefits/arrow-mobile2.svg);
+                bottom: -37%;
+                right: -7%;
+            }
         }
     }
 
 }
 
-.benefist__wrapper-img {
-    padding: 27px;
-    width: 90px;
-    height: 90px;
+
+.benefist__content-img {
+    display: flex;
+
+    padding: clamp(17px, 0.823rem + 1.06vw, 27px);
+    width: clamp(60px, 3.032rem + 3.19vw, 90px);
+    height: clamp(60px, 3.032rem + 3.19vw, 90px);
+
     border-radius: 15px;
     background: linear-gradient(135deg, #5840EE 0%, #A340DF 100%);
 
     &--reliability{
         background:linear-gradient(135deg, #4DFF20 0%, #1CFF84 7.4%, #00B2FF 100%);
     }
+
     &--reviews{
         background: linear-gradient(135deg, #F64444 0%, #F39323 99.58%);
     }
+
+    img{
+        min-width: 20px;
+    }
 }
 
-.benefist__wraper-text {
+.benefist__content-text {
     max-width: 470px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: clamp(5px, 0.073rem + 1.06vw, 15px);
+    font-size: clamp(12px, 0.606rem + 0.64vw, 18px);
 }
 
-.benefist__wraper-text__desc {
+.benefist__content-text__desc {
     color: rgba(255, 255, 255, 0.80);
     font-weight: 500;
     line-height: 1.7; 
+
+    @include mobile-x (){
+        line-height: 1.8;
+    }
 }
+
+
+
+
+

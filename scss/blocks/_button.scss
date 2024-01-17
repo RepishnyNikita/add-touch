@@ -18,13 +18,27 @@
         padding: 0 35px;
         font-weight: 600;
         line-height: 50px;
+
+        @include tablet(){
+            display: none;
+        }
     }
 
-    &--content{
-        padding: 0 65px;
+    &--nav-mobile{
+        font-size: 12px;
         font-weight: 700;
-        line-height: 62px;
+        line-height: 40px;
+        display: block;
+        align-self: center;
+        margin-bottom: 130px;
     }
+    
+
+    &--content{
+        padding: 0 clamp(35px, 1.538rem + 2.88vw,65px);
+        line-height: clamp(40px, 2.024rem + 2.12vw, 62px);
+    }
+
 
     &--faq{
         background: transparent;

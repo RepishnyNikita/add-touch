@@ -1,82 +1,88 @@
 .header {
-    padding: 22px 0 222px;
+    padding: 22px 0 clamp(0px, -5.314rem + 23.62vw, 222px);
+    position: relative;
 }
 
 .header__nav {
-    align-items: center;
-    margin-bottom: 142px;
+    margin-bottom: clamp(100px, 5.341rem + 4.04vw, 142px);
+}
+
+.header__wrapper{
+    display: flex;
+    gap: 90px;
+    position: relative;
+
+    @include tablet (){
+        flex-direction: column;
+        gap: unset;
+    }
 }
 
 .header__content {
     display: flex;
     flex-direction: column;
-    max-width: 580px;
+    max-width: clamp(480px, 15.938rem + 25vw, 580px);
     cursor:default;
     position: relative;
 
     & p{
-        margin-bottom: 15px;
+        margin-bottom: clamp(5px, 0.505rem + 0.53vw, 15px);
         color: rgba(255, 255, 255, 0.80);
-        font-size: 18px;
+        font-size: clamp(12px, 0.606rem + 0.64vw, 18px);
         font-weight: 500;
         line-height: 1.94; 
-    }
-    
-    &::before{
-        content:'';
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 1200px;
-        height: 1200px;
-        z-index: -1;
-        background-image: url(./../img/header/card-x2.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-        transform: translate(107%, -12%);
-    }
 
-    &::after{
-        content: url(./../img/header/wave.svg);
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(62%, 44%);
-        z-index: -2;
+        @include tablet (){
+            line-height: 2.08;
+        }
     }
+}
 
+.header__content-circle{
+    top: 0;
+    right: -50%;
+
+    @include mobile-x (){
+        right: 30px;
+    }
 }
 
 .header__content-title {
-    margin-bottom: 20px;
+    margin-bottom: clamp(5px, -0.047rem + 1.6vw, 20px);
 
-    &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 500px;
-        height: 500px;
-        border-radius: 500px;
-        background-color: rgba(255, 255, 255, 0.10);
-        filter: blur(250px);
-        transform: translate(91%, 10%);
+    span{
+
+        display: flex;
+        align-items: center;
+        gap: clamp(10px, 0.266rem + 1.6vw, 25px);
+
+        font-size: clamp(40px, 1.423rem + 4.79vw, 85px);
+        color: #fff;
+        font-weight: 500;
+
+        img{
+            max-width: clamp(40px, 1.543rem + 4.26vw, 80px);
+        }
     }
 }
 
 .header__content-btn {
     display: flex;
-    gap: 35px;
-    margin-bottom: 45px;
+    gap: clamp(20px, 0.891rem + 1.6vw, 35px);
+    margin-bottom: clamp(20px, 0.652rem + 2.66vw, 45px);
+    font-size: clamp(12px, 0.62rem + 0.58vw, 18px);
 
     position: relative;
 
-    &::before{
-        content: url(./../../img/header/arrow.svg);
-        position: absolute;
-        top: -25px;
-        right: -50px;
+}
+
+.header__content-btn__img{
+    position: absolute;
+    right: 0;
+    top: clamp(-40px, -3.457rem + 4.26vw, 0px);
+
+    img{
+        width: clamp(50px, 1.306rem + 8.09vw, 126px);
     }
 }
 
@@ -91,7 +97,7 @@
 
 .header__content-wrapper {
     display: flex;
-    gap: 55px;
+    gap: clamp(13px, -0.096rem + 4.04vw, 55px);
 }
 
 .header__content-wrapper__col {
@@ -100,7 +106,7 @@
     font-weight: 500;
 
     & span{
-        font-size: 45px;
+        font-size: clamp(30px, 1.55rem + 1.44vw, 45px);
         font-weight: 700;
     }
 
@@ -122,6 +128,40 @@
         }
     }
 }
+
+.header__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(58%, -10%);
+
+    &::after{
+        content: url(./../img/header/wave.svg);
+        position: absolute;
+        top: 22%;
+        left: -5%;
+        z-index: -2;
+
+        @include mobile-x (){
+            content: url(./../img/header/wave-mobile.png);
+            top: -10%;
+            left: 22%
+        }
+    }
+
+    @include tablet (){
+        position: unset;
+        transform: translate(5%, 5%);
+    }
+
+}
+
+.header__img-bg {
+    max-width: 1200px;
+    min-width: 395px;
+    width: 100%;
+}
+
 
 
 

@@ -1,7 +1,13 @@
 .nav {
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    gap: 20px;
+    gap: clamp(10px, -0.888rem + 2.63vw, 20px);
+    align-items: center;
+
+    @include tablet (){
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .nav__logo {
@@ -16,7 +22,12 @@
     justify-content: center;
     flex-wrap: wrap;
     font-weight: 500;
-    gap: 60px;
+    gap: clamp(10px, -5rem + 10vw, 60px);
+
+    
+    @include tablet(){
+        display: none;
+    }
 }
 
 .nav__list-item {
@@ -63,3 +74,109 @@
             }
     }
 }
+
+.nav-toggle {
+    display: none;
+
+    @include tablet (){
+        display: block;
+        cursor: pointer;
+        
+
+        padding: 10px;   //увеличиваю область клика
+        margin: 0 -10px; //и устроняю прыжок лого
+    }
+}
+
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    padding-bottom: 20px;
+
+    top: 78px;
+    bottom: 0;
+
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    overflow: hidden;
+    
+    z-index: -1;
+
+    background-color: rgba(0, 0, 0, 0.80);
+
+
+
+    &.open{
+        display: flex;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .social{
+        margin-bottom: 10px;
+    }
+}
+
+
+.nav-mobile__list {
+    display: none;
+
+    @include tablet(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+.nav-mobile__list-item {
+    position: relative;
+}
+
+.nav-mobile__list-link {
+    color: rgba(255, 255, 255, 0.60);
+
+    &--active{
+        color: #FFF;
+        font-weight: 600;
+
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+    
+            width: 100%;
+            height: 3px;
+            border-radius: 52px;
+            background: linear-gradient(90deg, #D034EA 0%, #F12626 49.48%, #F26428 100%);
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0;
+        height: 3px;
+        border-radius: 52px;
+        background: linear-gradient(90deg, #D034EA 0%, #F12626 49.48%, #F26428 100%);
+        transition: width 0.4s ease-out;
+    }
+    
+    &:hover{
+        color: #fff; 
+        transition: color .3s ease-in;
+            &::after{
+                width: 100%;
+            }
+    }
+}
+
+

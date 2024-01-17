@@ -1,0 +1,9 @@
+.circle{
+    position: absolute;
+    width: clamp(250px, 9.641rem + 26.6vw, 500px);
+    height: clamp(250px, 9.641rem + 26.6vw, 500px);
+    border-radius: 500px;
+    background-color: rgba(255, 255, 255, 0.10);
+    filter: blur(250px);
+    z-index: -1;
+}

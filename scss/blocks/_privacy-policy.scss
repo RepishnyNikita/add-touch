@@ -1,0 +1,17 @@
+.privacy-policy{
+    padding: 16px 50px;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.10);
+
+    &--mobile{
+        cursor: pointer;
+        padding: 15px 58px;
+        font-size: 12px;
+    }
+
+    a{
+        color: #FFF;
+        font-weight: 500;
+    }
+}

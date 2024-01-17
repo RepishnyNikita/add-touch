@@ -1,11 +1,12 @@
 .price {
-    padding: 65px 0;
+    padding: clamp(53px, 3.025rem + 1.28vw, 65px) 0 clamp(30px, 1.037rem + 3.72vw, 65px);
 }
 
 .price__container{
     max-width: 1530px;
-    padding: 0 50px;
+    padding-left: 50px;
     position: relative;
+    // margin-left: 35px; // отвод карточки от границы
 
     &::before,
     &::after{
@@ -15,6 +16,14 @@
         width: 700px;
         border: 2px solid #fff;
         border-radius: 50%;
+
+        @media(max-width:1310px){
+            z-index: -1;
+        }
+
+        @include mobile-x (){
+            display: none;
+        }
     }
 
     &::before{
@@ -27,27 +36,50 @@
         right: -38%;
     }
 
+    @include mobile-x (){
+        padding-left: 20px;
+        // margin-left: unset;
+    }
+
+
 }
 
 .price__title {
     text-align: center;
-    margin-bottom: 85px;
+    margin-bottom: clamp(55px, 2.719rem + 3.19vw, 85px);
     position: relative;
+    
 
     &::after{
         content: url(./../img/price/arrow-1.svg);
         position: absolute;
         top: 20px;
-        left: 22%;
+        left: clamp(45px, -17.679rem + 36.43vw, 300px);
+
+        @include tablet (){
+            content: url(./../../img/price/arrow-1-mobile.png);
+            top: -40px;
+            left: 74%;
+        }
     }
 }
 
+.price__circle{
+    top: -4%;
+    right: -10%;
+}
 
 .price__card {
-    display: grid;
-    grid-template-columns: repeat(3, 4fr);
-    column-gap: 35px;
-    row-gap: 83px;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    // grid-template-columns: repeat(3, 4fr);
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: clamp(35px, 1.158rem + 4.57vw, 78px);
+    
     position: relative;
 
     &::after{
@@ -55,6 +87,11 @@
         position: absolute;
         top: 43%;
         left: -14%;
+        z-index: -1;
+
+        @include tablet (){
+            display: none;
+        }
     }
 
     &::before{
