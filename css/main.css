@@ -111,8 +111,15 @@ body {
 }
 
 .header {
-  padding: 22px 0 clamp(0px, -5.793rem + 25.74vw, 242px);
+  padding: 22px 0 clamp(30px, -6.263rem + 36.17vw, 370px);
+  margin-bottom: -160px;
   position: relative;
+  overflow: hidden;
+}
+@media (max-width: 770px) {
+  .header {
+    margin-bottom: -30px;
+  }
 }
 
 .header__nav {
@@ -230,7 +237,6 @@ body {
   top: 0;
   left: 0;
   transform: translate(58%, -10%);
-  overflow: hidden;
 }
 .header__img::after {
   content: url(./../img/header/wave.svg);
