@@ -87,7 +87,16 @@
                 </div> 
 
                 <div class="header__img">
-                    <img class="header__img-bg" src="./img/header/card-x2-comp.webp" alt="cards">
+
+                    <picture>
+                        <source srcset="./img/header/card-x2-comp.webp" type="image/webp">
+                        <img
+                        class="header__img-bg"
+                        src="./img/header/card-x2-comp.png"
+                        srcset="./img/header/card-x2.png x2"
+                        alt="cards">
+                    </picture>
+                    
                 </div>
 
             </div>
@@ -109,7 +118,16 @@
                 <div class="benefits__circle circle"></div>
 
                 <div class="benefits__img">
-                    <img class="img" src="./img/benefits/card-x2.webp" alt="cards">
+
+                    <picture>
+                        <source srcset="./img/benefits/card-x2.webp" type="image/webp">
+                        <img 
+                        class="img"
+                        src="./img/benefits/card-x2.png"
+                        
+                        alt="cards">
+                    </picture>
+                    
                 </div>
 
                 <div class="benefits__col">
@@ -160,7 +178,7 @@
         </div>
     </section>
 
-    <section class="price none">
+    <section class="price">
         <div class="container price__container">
 
             <div class="price__title">
@@ -309,7 +327,7 @@
         </div>
     </section>
 
-    <section class="faq none">
+    <section class="faq ">
         <div class="container">
 
             <div class="faq__title">
@@ -399,7 +417,7 @@
         </div>
     </section>
 
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
 
             <nav class="footer__nav nav">
