@@ -1,6 +1,8 @@
 .benefist {
     padding: clamp(35px, 1.469rem + 3.19vw, 65px) 0 clamp(0px, -23.471rem + 67.06vw, 228px);
     background-color:rgba(255, 255, 255, 0.03);
+
+    overflow: hidden;
 }
 
 .benefits__title {

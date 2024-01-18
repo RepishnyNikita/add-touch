@@ -1,5 +1,6 @@
 .price {
     padding: clamp(53px, 3.025rem + 1.28vw, 65px) 0 clamp(30px, 1.037rem + 3.72vw, 65px);
+    overflow: hidden;
 }
 
 .price__container{
@@ -92,19 +93,6 @@
         @include tablet (){
             display: none;
         }
-    }
-
-    &::before{
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 500px;
-        height: 500px;
-        border-radius: 500px;
-        background-color: rgba(255, 255, 255, 0.10);
-        filter: blur(250px);
-        transform: translate(44%, -50%);
     }
 }
 

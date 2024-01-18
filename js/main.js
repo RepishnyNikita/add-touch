@@ -1,5 +1,6 @@
 function accordion() {
   const accordion = document.querySelectorAll('[data-name="accordion"]');
+  
   accordion.forEach(function (item) {
     item.addEventListener("click", function () {
       this.lastElementChild.classList.toggle("accordion__desc--hidden");

@@ -1,6 +1,9 @@
 .header {
-    padding: 22px 0 clamp(0px, -5.314rem + 23.62vw, 222px);
+    padding: 22px 0 clamp(0px, -5.793rem + 25.74vw, 242px);
+    // margin-bottom: -20px;
     position: relative;
+
+    // overflow: hidden;
 }
 
 .header__nav {
@@ -134,6 +137,7 @@
     top: 0;
     left: 0;
     transform: translate(58%, -10%);
+    overflow: hidden;
 
     &::after{
         content: url(./../img/header/wave.svg);
@@ -141,6 +145,8 @@
         top: 22%;
         left: -5%;
         z-index: -2;
+
+
 
         @include mobile-x (){
             content: url(./../img/header/wave-mobile.png);
