@@ -897,6 +897,8 @@ body {
 .accordion__header {
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
+  margin: -20px 0;
 }
 
 .accordion__header-button {
