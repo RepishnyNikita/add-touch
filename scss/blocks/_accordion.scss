@@ -15,17 +15,13 @@
 .accordion__header{
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
-    margin: -20px 0; //увеличение области клика
+
 }
 
 .accordion__header-button{
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 15px; //увеличение области клика
-    margin: -15px;
-    
 }
 
 .accordion__header-button__icon {

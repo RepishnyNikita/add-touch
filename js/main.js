@@ -1,13 +1,13 @@
 function accordion() {
   const accordion = document.querySelectorAll('[data-name="accordion"]');
-
   accordion.forEach(function (item) {
     item.addEventListener("click", function () {
-      this.nextElementSibling.classList.toggle("accordion__desc--hidden");
-      this.lastElementChild.firstElementChild.classList.toggle('accordion__header-button__icon--open')
+      this.lastElementChild.classList.toggle("accordion__desc--hidden");
+      this.firstElementChild.lastElementChild.firstElementChild.classList.toggle('accordion__header-button__icon--open')
     });
   });
 }
+
 accordion();
 
 function navMobile() {
