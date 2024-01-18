@@ -12,7 +12,8 @@
     
 
     &:hover{
-        animation: gradient 0.5s ease-in-out infinite;
+        outline: 2px solid #fff;
+        background: transparent;
     }
     
 
@@ -45,17 +46,14 @@
     &--faq{
         background: transparent;
         border-radius: clamp(15px, 0.818rem + 0.53vw, 20px);
-        border: 2px solid #FFF;
+        outline: 2px solid #FFF;
         color: #FFF;
+
+        &:hover{
+            background:linear-gradient(90deg, #D034EA 0%, #F12626 49.48%, #F26428 100%);
+            outline: unset;
+        }
     }
     
 }
 
-@keyframes gradient {
-    0%{
-        background:linear-gradient(90deg, #D034EA 0%, #F12626 49.48%, #F26428 100%)
-    }
-    100%{
-        background:linear-gradient(90deg, #F26428 0% , #F12626 49.48%, #D034EA 100%);
-    }
-}

@@ -81,10 +81,17 @@
     @include tablet (){
         display: block;
         cursor: pointer;
+        z-index: 99;
         
 
         padding: 10px;   //увеличиваю область клика
         margin: 0 -10px; //и устроняю прыжок лого
+
+        &--open{
+            position: fixed;
+            right: 15px;
+            top: 25px;
+        }
     }
 }
 
@@ -94,18 +101,18 @@
     position: absolute;
     padding-bottom: 20px;
 
-    top: 78px;
+    top:0;
     bottom: 0;
 
     flex-direction: column;
-    justify-content: end;
-    align-items: center;
+    // justify-content: end;
+    // align-items: center;
 
-    overflow: hidden;
     
     z-index: -1;
 
     background-color: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(10px);
 
 
 
@@ -113,6 +120,7 @@
         display: flex;
         width: 100%;
         z-index: 1;
+        position: fixed;
     }
 
     .social{
@@ -120,6 +128,14 @@
     }
 }
 
+.nav-mobile__header{
+    background-color:#161519;
+    margin-bottom: 30%;
+    height: 78px;
+    padding: 17px 15px 0; //выравнивание pixel
+    display: flex;
+    align-items: center;
+}
 
 .nav-mobile__list {
     display: none;

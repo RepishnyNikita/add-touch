@@ -4,6 +4,7 @@
     gap: clamp(8px, 0.332rem + 0.74vw, 15px);
 
     &--mobile{
+        justify-content: center;
         gap: 8px;
 
         a{

@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <header class="header">
+    <header class="header none">
         <div class="container">
 
             <nav class="header__nav nav">
@@ -29,14 +29,12 @@
                 <button class="button button--nav">Заказать</button> 
 
                 <div class="nav-toggle"> 
-
-                        <img class="nav-mobile__icon" src="./img/svg/nav.svg" alt="nav icon">
-                        
+                        <img class="nav-mobile__icon" src="./img/svg/nav.svg" alt="nav icon">    
                 </div>
  
             </nav>
 
-            <div class="header__wrapper">
+            <div class="header__wrapper ">
                 
 
                 <div class="header__content">
@@ -100,7 +98,7 @@
        
     </header>
 
-    <section class="benefist">
+    <section class="benefist none">
         <div class="container">
 
             <div class="benefits__title">
@@ -163,7 +161,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section class="price none">
         <div class="container price__container">
 
             <div class="price__title">
@@ -326,11 +324,13 @@
                     <div class="accordion">
 
                         <div data-name="accordion" class="accordion__header">
+
                             <h4 class="title title--h4">Вопрос 1</h4>
-                            <!-- <img class="accordion__header-toggle" src="./img/faq/minus.svg" alt="minus-plus"> -->
-                            <div class="accordion__header-toggle">
-                                <div class="accordion__header-toggle__icon accordion__header-toggle__icon--close"></div>
-                            </div>
+
+                            <button class="accordion__header-button">
+                                <div class="accordion__header-button__icon accordion__header-button__icon--open"></div>
+                            </button>
+
                         </div>
 
                         <p class="accordion__desc">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Давно выяснено, что при оценке дизайна и композиции читаемый текст</p>
@@ -338,24 +338,28 @@
 
                     <!-- 2 -->
                     <div class="accordion">
+
                         <div data-name="accordion" class="accordion__header">
                             <h4 class="title title--h4">Вопрос 2</h4>
-                            <!-- <img class="accordion__header-toggle" src="./img/svg/plus.svg" alt="minus"> -->
-                            <div class="accordion__header-toggle">
-                                <div class="accordion__header-toggle__icon"></div>
-                            </div>
+
+                            <button class="accordion__header-button ">
+                                <div class="accordion__header-button__icon"></div>
+                            </button>
                         </div>
+
                         <p class="accordion__desc accordion__desc--hidden">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Давно выяснено, что при оценке дизайна и композиции читаемый текст</p>
                     </div>
 
                     <!-- 3 -->
+
                     <div class="accordion">
                         <div data-name="accordion" class="accordion__header">
                             <h4 class="title title--h4">Вопрос 3</h4>
-                            <!-- <img class="accordion__header-toggle" src="./img/svg/plus.svg" alt="minus"> -->
-                            <div class="accordion__header-toggle">
-                                <div class="accordion__header-toggle__icon accordion__header-toggle__icon--open"></div>
-                            </div>
+
+                            <button class="accordion__header-button">
+                                <div class="accordion__header-button__icon"></div>
+                            </button>
+                            
                         </div>
                         <p class="accordion__desc accordion__desc--hidden">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Давно выяснено, что при оценке дизайна и композиции читаемый текст</p>
                     </div>
@@ -364,21 +368,24 @@
                     <div class="accordion">
                         <div data-name="accordion" class="accordion__header">
                             <h4 class="title title--h4">Вопрос 4</h4>
-                            <!-- <img class="accordion__header-toggle" src="./img/svg/plus.svg" alt="minus"> -->
-                            <div class="accordion__header-toggle">
-                                <div class="accordion__header-toggle__icon accordion__header-toggle__icon--open"></div>
-                            </div>
+
+                            <button class="accordion__header-button">
+                                <div class="accordion__header-button__icon"></div>
+                            </button>
                         </div>
                         <p class="accordion__desc accordion__desc--hidden">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Давно выяснено, что при оценке дизайна и композиции читаемый текст</p>
                     </div>
+
                     <!-- 5 -->
                     <div class="accordion">
+
                         <div data-name="accordion" class="accordion__header">
                             <h4 class="title title--h4">Вопрос 5</h4>
-                            <!-- <img class="accordion__header-toggle" src="./img/svg/plus.svg" alt="minus"> -->
-                            <div class="accordion__header-toggle">
-                                <div class="accordion__header-toggle__icon accordion__header-toggle__icon--open"></div>
-                            </div>
+
+                            <button class="accordion__header-button">
+                                <div class="accordion__header-button__icon"></div>
+                            </button>
+
                         </div>
                         <p class="accordion__desc accordion__desc--hidden">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст. Давно выяснено, что при оценке дизайна и композиции читаемый текст</p>
                     </div>
@@ -456,6 +463,16 @@
 
     <div class="nav-mobile">
 
+        <div class="nav-mobile__header">
+
+            <a href="#!" class="nav__logo">AddTouch</a>
+
+            <!-- <div class="nav-toggle"> 
+                <img class="nav-mobile__icon" src="./img/svg/nav.svg" alt="nav icon">    
+            </div> -->
+
+        </div>
+
 
         <ul class="nav-mobile__list">
             <li class="nav-mobile__list-item"><a class="nav-mobile__list-link nav-mobile__list-link--active" href="#!">Главная</a></li>
@@ -464,7 +481,6 @@
             <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">FAQ</a></li>
             <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Контакты</a></li>
         </ul>
-
 
         <button class="button button--nav button--nav-mobile">Заказать</button> 
 
