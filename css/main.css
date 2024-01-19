@@ -88,7 +88,10 @@ legend {
 
 html,
 body {
+  max-width: 100%;
+  width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -96,7 +99,6 @@ body {
   background-color: #161519;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
-  overflow-x: hidden;
 }
 
 .container {
@@ -111,15 +113,8 @@ body {
 }
 
 .header {
-  padding: 22px 0 clamp(30px, -6.263rem + 36.17vw, 370px);
-  margin-bottom: -160px;
+  padding: 22px 0 clamp(0px, -6.107rem + 27.14vw, 228px);
   position: relative;
-  overflow: hidden;
-}
-@media (max-width: 770px) {
-  .header {
-    margin-bottom: -30px;
-  }
 }
 
 .header__nav {
@@ -519,7 +514,6 @@ body {
 .benefist {
   padding: clamp(35px, 1.469rem + 3.19vw, 65px) 0 clamp(0px, -23.471rem + 67.06vw, 228px);
   background-color: rgba(255, 255, 255, 0.03);
-  overflow: hidden;
 }
 
 .benefits__title {

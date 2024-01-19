@@ -1,12 +1,6 @@
 .header {
-    padding: 22px 0 clamp(30px, -6.263rem + 36.17vw, 370px);
-    margin-bottom: -160px;
+    padding: 22px 0 clamp(0px, -6.107rem + 27.14vw, 228px);
     position: relative;
-
-    overflow: hidden;
-    @include mobile-x(){
-        margin-bottom: -30px;
-    }
 }
 
 .header__nav {

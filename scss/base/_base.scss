@@ -2,7 +2,10 @@
 
 html,
 body{
+    max-width: 100%;
+    width: 100%;
     height: 100vh;
+    overflow-x: hidden;
     
 }
 
@@ -11,7 +14,6 @@ body{
     background-color: #161519;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.80);
-    overflow-x: hidden;
 }
 
 .container{
