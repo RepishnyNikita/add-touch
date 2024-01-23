@@ -369,7 +369,7 @@ body {
 
 .nav-mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   padding-bottom: 20px;
   top: 0;
   bottom: 0;
