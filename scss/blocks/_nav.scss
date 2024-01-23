@@ -96,7 +96,6 @@
 }
 
 .nav-mobile {
-    // display: none;
     padding-bottom: 20px;
 
     position: fixed;
@@ -112,7 +111,7 @@
     opacity: 0;
     z-index: -1;
 
-    transition: 0.2s ease-in;
+    transition: 0.3s ease-in;
 
     &.open{
         top: 0;

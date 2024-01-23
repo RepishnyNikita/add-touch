@@ -91,7 +91,6 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -99,6 +98,7 @@ body {
   background-color: #161519;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -381,7 +381,7 @@ body {
           backdrop-filter: blur(10px);
   opacity: 0;
   z-index: -1;
-  transition: 0.2s ease-in;
+  transition: 0.3s ease-in;
 }
 .nav-mobile.open {
   top: 0;
