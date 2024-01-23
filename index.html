@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="./fonts/stylesheet.css" as="font">
     <link rel="stylesheet" href="./css/main.css">
 
     <script src="./js/main.js" defer></script>
@@ -11,7 +13,7 @@
 </head>
 <body>
 
-    <header class="header">
+    <header id="header" class="header">
         <div class="container">
 
             <nav class="header__nav nav">
@@ -19,11 +21,11 @@
                 <a href="#!" class="nav__logo">AddTouch</a>
 
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a class="nav-list__link nav-list__link--active" href="#!">Главная</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">Преимущества</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">Наши цены</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">FAQ</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">Контакты</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link nav-list__link--active" href="#header">Главная</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#benefist">Преимущества</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#price">Наши цены</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#faq">FAQ</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#contact">Контакты</a></li>
                 </ul>
                 
                 <button class="button button--nav">Заказать</button> 
@@ -89,12 +91,41 @@
                 <div class="header__img">
 
                     <picture>
-                        <source srcset="./img/header/card-x2-comp.webp" type="image/webp">
+                        
+                        <source 
+                        media="(max-width:770px)" 
+                        srcset="./img/header/card-mobile.webp 1x, ./img/header/card-mobile-2x.webp 2x" 
+                        type="image/webp"
+                        >
+
+                        <source 
+                        media="(max-width:770px)" 
+                        srcset="./img/header/card-mobile.png 1x, ./img/header/card-mobile-2x.png 2x"
+                        >
+
+                        <source
+                        media="(max-width:1000px)"
+                        srcset="./img/header/card-tablet.webp 1x, ./img/header/card-tablet-x2.webp 2x" 
+                        type="image/webp"
+                        >
+
+                        <source
+                        media="(max-width:1000px)"
+                        srcset="./img/header/card-tablet.png 1x, ./img/header/card-tablet-x2.png 2x" 
+                        >
+                        
+                        <source
+                        srcset="./img/header/card-desctop.webp 1x, ./img/header/card-desctop-x2.webp 2x"
+                        type="image/webp"
+                        >
+
                         <img
                         class="header__img-bg"
-                        src="./img/header/card-x2-comp.png"
-                        srcset="./img/header/card-x2.png x2"
-                        alt="cards">
+                        src="./img/header/card-desctop.png"
+                        srcset="./img/header/card-desctop.png 1x, ./img/header/card-desctop-x2.jpg 2x"
+                        alt="cards"
+                        >
+
                     </picture>
                     
                 </div>
@@ -106,7 +137,7 @@
        
     </header>
 
-    <section class="benefist">
+    <section id="benefist" class="benefist">
         <div class="container">
 
             <div class="benefits__title">
@@ -119,12 +150,43 @@
 
                 <div class="benefits__img">
 
+
                     <picture>
-                        <source srcset="./img/benefits/card-x2.webp" type="image/webp">
+
+                        <source
+                        media="(max-width:700px)"
+                        srcset="./img/benefits/cards-mobile.webp 1x, ./img/benefits/cards-mobile@2x.webp 2x "
+                        type="image/webp"
+                        >
+
+                        <source
+                        media="(max-width:700px)"
+                        srcset="./img/benefits/cards-mobile.png 1x, ./img/benefits/cards-mobile@2x.png 2x "
+                        >
+                        
+                        <source
+                        media="(max-width:900px)"
+                        srcset="./img/benefits/cards-tablet.webp 1x, ./img/benefits/cards-tablet@2x.webp 2x "
+                        type="image/webp"
+                        >
+
+                        <source
+                        media="(max-width:900px)"
+                        srcset="./img/benefits/cards-tablet.png 1x, ./img/benefits/cards-tablet@2x.png 2x "
+                        >
+
+                        <source 
+                        srcset="./img/benefits/cards.webp 1x, ./img/benefits/cards@2x.webp 2x "
+                        type="image/webp"
+                        >
+
                         <img 
                         class="img"
-                        src="./img/benefits/card-x2.png"
-                        alt="cards">
+                        src="./img/benefits/cards.png"
+                        srcset="./img/benefits/cards.png 1x, ./img/benefits/cards@2x.png 2x"
+                        alt="cards"
+                        >
+
                     </picture>
                     
                 </div>
@@ -177,7 +239,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
         <div class="container price__container">
 
             <div class="price__title">
@@ -195,19 +257,22 @@
                             <img src="./img/cards/card-1.png" alt="card-1">
                         </div>
 
-                        <div class="card__text">
-                            <h3 class="title title--h3">Общая NFC - Карта </h3>
-                            <p class="card__text-desc">Карта без нанесения фирменного стиля и контактной информации. С полным набором функций.</p>
-                            <span>500₽</span>
-                            <span>Опт: 250₽</span>
-                        </div>
+                        <div class="card__wrapper">
 
-                        <div class="card__btn">
-                            <button class="button button--content">Заказать</button>
-                            <a href="#!">Подробнее</a>
-                        </div>
+                            <div class="card__text">
+                                <h3 class="title title--h3">Общая NFC - Карта </h3>
+                                <p class="card__text-desc">Карта без нанесения фирменного стиля и контактной информации. С полным набором функций.</p>
+                                <span>500₽</span>
+                                <span>Опт: 250₽</span>
+                            </div>
 
-                        <p>Гарантия на товар: 1 – год.</p>
+                            <div class="card__btn">
+                                <button class="button button--content">Заказать</button>
+                                <a href="#!">Подробнее</a>
+                            </div>
+
+                            <p>Гарантия на товар: 1 – год.</p>
+                        </div>
                     
                     </div>
                     <!-- ============== 2 ============= -->
@@ -217,20 +282,22 @@
                             <img src="./img/cards/card-2.png" alt="card-2">
                         </div>
 
-                        <div class="card__text">
-                            <h3 class="title title--h3">Персональная</h3>
-                            <p class="card__text-desc">Фирменная карта с нанесением контактной информации и полным набором функций.</p>
-                            <span>600₽</span>
-                            <span>Опт: 450₽</span>
+                        <div class="card__wrapper">
+                            <div class="card__text">
+                                <h3 class="title title--h3">Персональная</h3>
+                                <p class="card__text-desc">Фирменная карта с нанесением контактной информации и полным набором функций.</p>
+                                <span>600₽</span>
+                                <span>Опт: 450₽</span>
+                            </div>
+
+                            <div class="card__btn">
+                                <button class="button button--content">Заказать</button>
+                                <a href="#!">Подробнее</a>
+                            </div>
+
+                            <p>Гарантия на товар: 1 – год.</p>
                         </div>
 
-                        <div class="card__btn">
-                            <button class="button button--content">Заказать</button>
-                            <a href="#!">Подробнее</a>
-                        </div>
-
-                        <p>Гарантия на товар: 1 – год.</p>
-                    
                     </div>
                     <!-- ============== 3 ============= -->
                     <div class="card">
@@ -239,12 +306,14 @@
                             <img src="./img/cards/card-3.png" alt="card-3">
                         </div>
 
-                        <div class="card__text">
-                            <h3 class="title title--h3">Индивидуальный дизайн</h3>
-                            <p class="card__text-desc">Карта с нанесением собственного дизайна и с полным набором функций.</p>
-                            <span>700₽</span>
-                            <span>Опт: 1000₽</span>
-                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__text">
+                                <h3 class="title title--h3">Индивидуальный дизайн</h3>
+                                <p class="card__text-desc">Карта с нанесением собственного дизайна и с полным набором функций.</p>
+                                <span>700₽</span>
+                                <span>Опт: 1000₽</span>
+                            </div>
+                        
 
                         <div class="card__btn">
                             <button class="button button--content">Заказать</button>
@@ -252,7 +321,8 @@
                         </div>
 
                         <p>Гарантия на товар: 1 – год.</p>
-                    
+                        </div>
+
                     </div>
                     <!-- ============= 4 ============== -->
                     <div class="card">
@@ -261,12 +331,14 @@
                             <img src="./img/cards/card-1.png" alt="card-1">
                         </div>
 
-                        <div class="card__text">
-                            <h3 class="title title--h3">Общая NFC - Карта </h3>
-                            <p class="card__text-desc">Карта без нанесения фирменного стиля и контактной информации. С полным набором функций.</p>
-                            <span>500₽</span>
-                            <span>Опт: 250₽</span>
-                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__text">
+                                <h3 class="title title--h3">Общая NFC - Карта </h3>
+                                <p class="card__text-desc">Карта без нанесения фирменного стиля и контактной информации. С полным набором функций.</p>
+                                <span>500₽</span>
+                                <span>Опт: 250₽</span>
+                            </div>
+                        
 
                         <div class="card__btn">
                             <button class="button button--content">Заказать</button>
@@ -274,7 +346,8 @@
                         </div>
 
                         <p>Гарантия на товар: 1 – год.</p>
-                    
+                        </div>
+
                     </div>
                     <!-- ============== 5 ============= -->
                     <div class="card">
@@ -282,13 +355,15 @@
                         <div class="card__img">
                             <img src="./img/cards/card-2.png" alt="card-2">
                         </div>
-
-                        <div class="card__text">
-                            <h3 class="title title--h3">Персональная</h3>
-                            <p class="card__text-desc">Фирменная карта с нанесением контактной информации и полным набором функций.</p>
-                            <span>600₽</span>
-                            <span>Опт: 450₽</span>
-                        </div>
+                        
+                        <div class="card__wrapper">
+                            <div class="card__text">
+                                <h3 class="title title--h3">Персональная</h3>
+                                <p class="card__text-desc">Фирменная карта с нанесением контактной информации и полным набором функций.</p>
+                                <span>600₽</span>
+                                <span>Опт: 450₽</span>
+                            </div>
+                        
 
                         <div class="card__btn">
                             <button class="button button--content">Заказать</button>
@@ -296,6 +371,7 @@
                         </div>
 
                         <p>Гарантия на товар: 1 – год.</p>
+                        </div>
                     
                     </div>
                     <!-- ============== 6 ============= -->
@@ -305,6 +381,7 @@
                             <img src="./img/cards/card-3.png" alt="card-3">
                         </div>
 
+                        <div class="card__wrapper">
                         <div class="card__text">
                             <h3 class="title title--h3">Индивидуальный дизайн</h3>
                             <p class="card__text-desc">Карта с нанесением собственного дизайна и с полным набором функций.</p>
@@ -318,7 +395,8 @@
                         </div>
 
                         <p>Гарантия на товар: 1 – год.</p>
-                    
+                        </div>
+                        
                     </div>
 
             </div>
@@ -326,7 +404,7 @@
         </div>
     </section>
 
-    <section class="faq ">
+    <section id="faq" class="faq ">
         <div class="container">
 
             <div class="faq__title">
@@ -416,7 +494,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
 
             <nav class="footer__nav nav">
@@ -424,12 +502,13 @@
                 <a href="#!" class="nav__logo">AddTouch</a>
 
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a class="nav-list__link nav-list__link--active" href="#!">Главная</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">Преимущества</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">Наши цены</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">FAQ</a></li>
-                    <li class="nav__list-item"><a class="nav-list__link" href="#!">Контакты</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link nav-list__link--active" href="#header">Главная</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#benefist">Преимущества</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#price">Наши цены</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#faq">FAQ</a></li>
+                    <li class="nav__list-item"><a class="nav-list__link" href="#contact">Контакты</a></li>
                 </ul>
+
                 
                 <button class="button button--nav">Заказать</button> 
 
@@ -491,11 +570,11 @@
 
 
         <ul class="nav-mobile__list">
-            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link nav-mobile__list-link--active" href="#!">Главная</a></li>
-            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Преимущества</a></li>
-            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Наши цены</a></li>
-            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">FAQ</a></li>
-            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#!">Контакты</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link nav-mobile__list-link--active" href="#header">Главная</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#benefist">Преимущества</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#price">Наши цены</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#faq">FAQ</a></li>
+            <li class="nav-mobile__list-item"><a class="nav-mobile__list-link" href="#contact">Контакты</a></li>
         </ul>
 
         <button class="button button--nav button--nav-mobile">Заказать</button> 

@@ -7,6 +7,11 @@
     clamp(20px, 1.13rem + 0.53vw, 25px)
     clamp(15px, 0.559rem + 1.32vw, 30px);
 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     max-width:450px;
     width: 100%;
     position: relative;
@@ -30,16 +35,19 @@
 }
 
 .card__img {
-    // position: absolute;
-    // top: -40px;
-    // left: -40px;
     max-width: clamp(280px, 14.771rem + 12.13vw, 394px);
     min-width: 280px;
     transform: translate(-20%,-11%);
 
     @include mobile (){
-        transform: translate(-1%,-11%);
+        transform: translate(0%,-11%);
     }
+}
+
+
+.card__wrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 .card__text {
@@ -54,7 +62,6 @@
         font-weight: 700;
     }
 }
-
 
 .card__text-desc {
     font-weight: 500;

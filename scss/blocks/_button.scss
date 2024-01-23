@@ -1,8 +1,9 @@
 .button{
     padding: 0 55px;
+
     line-height: clamp(39px, 1.791rem + 2.87vw, 66px);
     font-weight: 700;
-
+    color: #FFF;
     font-size: clamp(12px, 0.606rem + 0.64vw, 18px);
 
     justify-self: flex-end;

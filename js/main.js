@@ -15,17 +15,24 @@ function navMobile() {
   const navIcon = document.querySelector(".nav-toggle");
   const navMobile = document.querySelector(".nav-mobile");
   const navMobileIcon = document.querySelector(".nav-mobile__icon");
+  const navMobileList = document.querySelectorAll(".nav-mobile__list-item");
 
   navIcon.addEventListener("click", function () {
     this.classList.toggle("nav-toggle--open")
     navMobile.classList.toggle("open");
-
-
+    
     if (navMobileIcon.getAttribute("src") == "./img/svg/nav.svg") {
       navMobileIcon.src = "./img/svg/close-nav.svg";
     } else {
       navMobileIcon.src = "./img/svg/nav.svg";
     }
   });
+
+  for(let list of navMobileList){
+    list.addEventListener('click', function(){
+      navMobile.classList.remove("open");
+    })
+  }
+
 }
 navMobile();

@@ -1,5 +1,4 @@
 /* Reset and base styles  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -92,6 +91,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -468,6 +468,7 @@ body {
   padding: 0 55px;
   line-height: clamp(39px, 1.791rem + 2.87vw, 66px);
   font-weight: 700;
+  color: #FFF;
   font-size: clamp(12px, 0.606rem + 0.64vw, 18px);
   justify-self: flex-end;
   align-self: flex-start;
@@ -746,6 +747,9 @@ body {
 
 .card {
   padding: 0 clamp(25px, 0.755rem + 2.81vw, 57px) clamp(20px, 1.13rem + 0.53vw, 25px) clamp(15px, 0.559rem + 1.32vw, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 450px;
   width: 100%;
   position: relative;
@@ -771,8 +775,13 @@ body {
 }
 @media (max-width: 557px) {
   .card__img {
-    transform: translate(-1%, -11%);
+    transform: translate(0%, -11%);
   }
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .card__text {
