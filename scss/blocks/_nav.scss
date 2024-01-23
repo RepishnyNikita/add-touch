@@ -96,28 +96,28 @@
 }
 
 .nav-mobile {
-    display: none;
-    position: fixed;
+    // display: none;
     padding-bottom: 20px;
 
-    top:0;
-    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:-100%;
+    left: 0;
 
+    display: flex;
     flex-direction: column;
-    
-    z-index: -1;
-
     background-color: rgba(0, 0, 0, 0.80);
     backdrop-filter: blur(10px);
+    opacity: 0;
+    z-index: -1;
 
-
+    transition: 0.2s ease-in;
 
     &.open{
-        display: flex;
-        width: 100%;
-        height: 100%;
+        top: 0;
+        opacity: 1;
         z-index: 1;
-        position: fixed;
     }
 
     .social{
